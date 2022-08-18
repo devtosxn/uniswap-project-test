@@ -3,7 +3,7 @@ import { ethers } from "hardhat";
 async function main() {
     //Interact with Uniswap [swapTokenforExactToken] functions
     //swap usdt to dai
-    
+
     //TO-DO
     //erc20 token interface
     //Approve the uniswap contract
@@ -14,8 +14,8 @@ async function main() {
     const USDTAddress = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48";
     const DAIAddress = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
     const UNIRouter = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
-    const amountOut = 3e6;
-    const amountIn = 2e6;
+    const amountIn = 3e6;
+    const amountOutMin = 2e6;
 
     const helpers = require("@nomicfoundation/hardhat-network-helpers");
     const USDTHolder = "0xf584f8728b874a6a5c7a8d4d387c9aae9172d621";
@@ -33,11 +33,11 @@ async function main() {
         UNIRouter,
         impersonatedSigner
     );
-    await USDC.approve(UNIRouter, amountOut);
+    await USDC.approve(UNIRouter, amountOutMin);
     const usdcBal = await USDC.balanceOf(impersonatedSigner.address);
     const daiBal = await DAI.balanceOf(impersonatedSigner.address);
 
-    console.log("balance after swap:", "USDC:", usdcBal.toString(), "DAI:", daiBal.toString());
+    console.log("Balance after swap:", "USDC:", usdcBal.toString(), "DAI:", daiBal.toString());
 
     console.log("==========================================");
     console.log("==========================================");
@@ -46,12 +46,20 @@ async function main() {
     console.log("==========================================");
     console.log("==========================================");
 
-    await ROUTER.swapTokensForExactTokens(
-        amountOut,
+    // await ROUTER.swapTokensForExactTokens(
+    //     amountOut,
+    //     amountIn,
+    //     [USDTAddress, DAIAddress],
+    //     USDTHolder,
+    //     1960674129,
+    // );
+
+    await ROUTER.swapExactTokensForTokens(
         amountIn,
+        amountOutMin,
         [USDTAddress, DAIAddress],
         USDTHolder,
-        1960674129
+        1660845930,
     );
     console.log("Swapped Tokens");
 
