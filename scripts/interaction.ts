@@ -17,6 +17,8 @@ const main = async () => {
   const newContractBalanceTxn = await toxtokencontract.checkContractBalance()
   console.log("ToxToken Contract Balance:", newContractBalanceTxn);
 
+  // TRANSACTION HASH --> 0x461b6012610d21cc2531882f13ddc1b2a8eacd4ea14b2bc8f98b6797e794f63f
+
 }
 
 main().catch((error) => {
