@@ -11,9 +11,9 @@ Hardhat tools with MAINNET FORKING:
 
 The two questions must be in the same hardhat file.
 
-### RESULTS CAN BE FOUND IN [results.txt](https://github.com/devtosxn/uniswap-project-test/blob/main/result.txt)
 
-### SCREENSHOTS can be found [here](https://github.com/devtosxn/uniswap-project-test/blob/main/SCREENSHOTS.md)
+- Uniswap Screenshots can be found [here](https://github.com/devtosxn/uniswap-project-test/blob/main/SCREENSHOTS.md)
+- Smart Contract Results can be found [here](https://github.com/devtosxn/uniswap-project-test/blob/main/result.txt)
 
 Try running some of the following tasks:
 
