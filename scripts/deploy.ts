@@ -1,16 +1,14 @@
 import { ethers } from "hardhat";
 
 const main = async () => {
-  const SwapFactory = await ethers.getContractFactory("SwapContract");
-  const swapcontract = await SwapFactory.deploy();
+  const ToxTokenFactory = await ethers.getContractFactory("ToxToken");
+  const toxtokencontract = await ToxTokenFactory.deploy();
 
-  await swapcontract.deployed();
+  await toxtokencontract.deployed();
 
-  console.log("Staking Contract deployed to:", swapcontract.address);
+  console.log("ToxToken Contract deployed to:", toxtokencontract.address);
 }
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
