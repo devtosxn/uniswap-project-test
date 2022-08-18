@@ -22,3 +22,5 @@ GAS_REPORT=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.ts
 ```
+
+### Pending Task - Add Screenshots
