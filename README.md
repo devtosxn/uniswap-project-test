@@ -12,7 +12,7 @@ ii) write a smart contract that does anything you want and deploy it to testnet 
 
 The two questions must be in the same hardhat file.
 
-RESULTS CAN BE FOUND IN [results.txt]()
+RESULTS CAN BE FOUND IN [results.txt](https://github.com/devtosxn/uniswap-project-test/blob/main/result.txt)
 
 Try running some of the following tasks:
 
